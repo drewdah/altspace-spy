@@ -3,19 +3,8 @@ import '../style/base.css';
 import THREE from 'three';
 import altspace from 'altspace';
 
-import ChangeColorBehavior from './behaviors/change-color.js';
+//import AFRAME from 'aframe';
 
-var boxEl = document.querySelector('a-box');
-
-boxEl.addEventListener('mouseenter', function () {
-    boxEl.setAttribute('scale', {x: 3, y: 3, z: 3});
-    console.log("mouseenter");
-});
-
-boxEl.addEventListener('mouseleave', function () {
-    boxEl.setAttribute('scale', {x: 1, y: 1, z:1});
-    console.log("mouseleave");
-});
 
 /*const sim = altspace.utilities.Simulation();
 const config = { authorId: 'AltspaceVR', appId: 'SpinningCube' };
