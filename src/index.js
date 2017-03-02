@@ -5,10 +5,22 @@ import altspace from 'altspace';
 
 import ChangeColorBehavior from './behaviors/change-color.js';
 
-const sim = altspace.utilities.Simulation();
-const config = { authorId: 'AltspaceVR', appId: 'SpinningCube' };
+var boxEl = document.querySelector('a-box');
 
+boxEl.addEventListener('mouseenter', function () {
+    boxEl.setAttribute('scale', {x: 3, y: 3, z: 3});
+    console.log("mouseenter");
+});
+
+boxEl.addEventListener('mouseleave', function () {
+    boxEl.setAttribute('scale', {x: 1, y: 1, z:1});
+    console.log("mouseleave");
+});
+
+/*const sim = altspace.utilities.Simulation();
+const config = { authorId: 'AltspaceVR', appId: 'SpinningCube' };
 const CUBE_SCALE = 149;
+
 function createCube() {
   const geometry = new THREE.BoxGeometry(1, 1, 1);
   const material = new THREE.MeshBasicMaterial({ color: '#ffffff' });
@@ -35,4 +47,4 @@ altspace.utilities.sync.connect(config).then((connection) => {
     },
   });
   sim.scene.addBehavior(sceneSync);
-});
+});*/
